@@ -1,4 +1,3 @@
-```text
 numpy
 pandas
 torch

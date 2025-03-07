@@ -12,3 +12,16 @@ This repository contains materials and code related to MICCAI 2025
 - **training.py**: Training and evaluation routines.
 - **main.py**: Main script to run the experiments.
 - **requirements.txt**: Python package dependencies.
+
+
+## Debiased Batch Normalization
+
+Easily implement debiased batch normalization by simply replacing the standard PyTorch BatchNorm with our custom `DebiasedBatchNorm` class. For example:
+
+```python
+# Replace this:
+self.batch_norm1 = nn.BatchNorm1d(embed_dim)
+
+# With this:
+from debiased_bn import DebiasedBatchNorm
+self.batch_norm1 = DebiasedBatchNorm(embed_dim, sub_batch_num, sub_batch_size)

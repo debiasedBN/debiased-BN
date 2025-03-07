@@ -24,4 +24,4 @@ self.batch_norm1 = nn.BatchNorm1d(embed_dim)
 
 # With this:
 from debiased_bn import DebiasedBatchNorm
-self.batch_norm1 = DebiasedBatchNorm(embed_dim, sub_batch_num, sub_batch_size)
+self.batch_norm1 = DebiasedBatchNorm(embed_dim, sub_batch_num, sub_batch_size) # batch size = sub_batch_num * sub_batch_size # 64, 8, 8
